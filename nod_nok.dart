@@ -21,16 +21,14 @@ class NodNok {
 
     // Nod:
     if ( a == 0 ) a = 1;
-    if ( a < 0 ) a *= -1;
-    return a ;
+    return a.abs();
   }
 
   // nok for two integers
   int _nokPair(int a, int b, int n) {
 
     int res = a ~/ n * b;
-    if ( res < 0 ) res *= -1;
-    return res;
+    return res.abs();
   }
 
   /// Constructor for list of integers
@@ -46,8 +44,6 @@ class NodNok {
       nod = _nodPair(nod, numbers[i]);
       nok = _nokPair(nok, numbers[i], _nodPair(nok, numbers[i]));
     }
-    // print(numbers);
-    // print('NOD=$nod  NOK=$nok');
   }
 
   /// Constructor for two integers

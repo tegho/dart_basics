@@ -1,11 +1,13 @@
+// Task 02
+
 import 'dart:math' show pow;
 
 /// Class to convert x-based integers.
 /// Base2 and base10 only supported.
 /// Negatives supported.
 class BaseConverter {
-  int valInt = 0;
-  String valStr = '';
+  late final int valInt;
+  late final String valStr;
   final int _lenBinary;
 
   // convert integer to binary string of _lenBinary bits
@@ -50,9 +52,9 @@ class BaseConverter {
     switch (val.runtimeType) {
       case int:
         valInt = val;
-        int lenNeeded = valInt.bitLength + ( valInt.isNegative ? 1:0 );
+        int lenNeeded = val.bitLength + ( val.isNegative ? 1:0 );
         if ( lenNeeded > _lenBinary ) throw  RangeError.value(val, 'val', 'String must be at least length $lenNeeded to fit this value');
-        valStr = _intToBinaryStr(valInt);
+        valStr = _intToBinaryStr(val);
         break;
 
       case String:

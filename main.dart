@@ -1,5 +1,5 @@
 //
-// import 'package:my01_flutter/nod_nok.dart';
+// import 'package:my01_flutter/t01_nod_nok.dart';
 // void main() {
 //   NodNok nn;
 //   nn = NodNok( [0,0] );
@@ -22,7 +22,7 @@
 //   print('NOD: ${nn.nod}  NOK: ${nn.nok}');
 // }
 
-// import 'package:my01_flutter/base_converter.dart';
+// import 'package:my01_flutter/t02_base_converter.dart';
 // void main() {
 //   BaseConverter nn;
 //   nn = BaseConverter(-2,2);
@@ -53,3 +53,26 @@
 //   print('>> ${nn.valInt}');
 // }
 
+// import 'package:my01_flutter/t03_num_in_str.dart';
+// void main() {
+//   PickNumsFromStr nn;
+//   // nn = PickNumsFromStr( 'dogo 1 193569 de 0 b3 0xa -5 -99.2 723.1 -0.0  ' );
+//   // nn = PickNumsFromStr( '' );
+//   print('in:>${nn.valStr}<');
+//   print('==${nn.numList}');
+//
+// }
+
+// import 'package:my01_flutter/t04_words_counter.dart';
+// void main() {
+//   WordsCounter nn;
+//
+//   // Set<String> col = {'word1', 'word2', 'word3', 'word4', 'word5'};
+//   List<String> col = ['word1', 'word2','word2', 'word3','word3','word3', 'word4','word4','word4','word4'];
+//   // Set<String> col = {};
+//   nn = WordsCounter( col );
+//   for (var key in nn.wordMap.keys) {
+//     print('map:${key}:${nn.wordMap[key]}');
+//   }
+//
+// }

@@ -1,8 +1,10 @@
+// Task 01
+
 /// Class to find Nod and Nok for any number of integers.
 /// Does not use 'gcd' method of 'int' class.
 class NodNok {
-  int nod = 1;
-  int nok = 0;
+  late final int nod;
+  late final int nok;
 
   // nod for two integers
   int _nodPair(int a, int b) {
@@ -38,6 +40,9 @@ class NodNok {
       if (n is! int) throw ArgumentError.value(n, 'numbers', 'Only integers allowed');
     }
 
+    int nod;
+    int nok;
+
     nod = _nodPair(numbers[0], numbers[1]);
     // nod = (numbers[0]).gcd(numbers[1]);
     nok = _nokPair(numbers[0], numbers[1], nod);
@@ -47,6 +52,9 @@ class NodNok {
       // nod = nod.gcd(numbers[i]);
       // nok = _nokPair(nok, numbers[i], nok.gcd(numbers[i]));
     }
+
+    this.nod = nod;
+    this.nok = nok;
   }
 
   /// Constructor for two integers

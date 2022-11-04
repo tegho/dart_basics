@@ -9,6 +9,6 @@ class WordsCounter {
   WordsCounter(this.param){
     Map<String, int> m = {};
     for (var el in param)  m[el] = m.putIfAbsent(el, () => 0) +1;
-    wordMap = Map<String, int>.from(m);
+    wordMap = Map.from(m);
   }
 }

@@ -74,5 +74,15 @@
 //   for (var key in nn.wordMap.keys) {
 //     print('map:${key}:${nn.wordMap[key]}');
 //   }
-//
 // }
+//
+// import 'package:my01_flutter/t05_word_digits_picker.dart';
+// void main() {
+//   PickWDigitsFromStr nn;
+//   nn = PickWDigitsFromStr( 'dogo, nine1, eight, 4, oNe, 0xCC,  two ,cat, eight ' );
+//   // nn = PickWDigitsFromStr( '' );
+//   // nn = PickWDigitsFromStr( 'one, Two, zero, zero' );
+//   print('in:>${nn.param}<');
+//   print('==${nn.theDigits}');
+// }
+

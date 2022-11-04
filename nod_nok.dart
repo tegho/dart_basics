@@ -1,11 +1,11 @@
-/// Class to find Nod and Nok for any number of integers
+/// Class to find Nod and Nok for any number of integers.
+/// Does not use 'gcd' method of 'int' class.
 class NodNok {
   int nod = 1;
   int nok = 0;
 
   // nod for two integers
   int _nodPair(int a, int b) {
-
     if ( a < b ) {
       int t = b;
       b = a;
@@ -39,10 +39,13 @@ class NodNok {
     }
 
     nod = _nodPair(numbers[0], numbers[1]);
+    // nod = (numbers[0]).gcd(numbers[1]);
     nok = _nokPair(numbers[0], numbers[1], nod);
     for (var i = 2; i < numbers.length; i++ ) {
       nod = _nodPair(nod, numbers[i]);
       nok = _nokPair(nok, numbers[i], _nodPair(nok, numbers[i]));
+      // nod = nod.gcd(numbers[i]);
+      // nok = _nokPair(nok, numbers[i], nok.gcd(numbers[i]));
     }
   }
 

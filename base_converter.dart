@@ -15,11 +15,10 @@ class BaseConverter {
 
     // get LSB and shift
     while ( (i != 0) && (i != -1) ) {
-      // resultStr = ( (i & 1 == 1)? '1':'0' ) + resultStr;
-      resultStr = ( (i.isOdd)? '1':'0' ) + resultStr;
+      resultStr = ( i.isOdd ? '1':'0' ) + resultStr;
       i >>= 1;
     }
-    resultStr = resultStr.padLeft(_lenBinary, valInt >= 0 ? '0':'1');
+    resultStr = resultStr.padLeft(_lenBinary, valInt.isNegative ? '1':'0');
     return resultStr;
   }
 
@@ -31,11 +30,10 @@ class BaseConverter {
     bool negNum = str[0] == '1';
 
     // each digit considered as 0 or 1 depended on negNum
-    for ( int i=((negNum)?0:1); i<str.length; i++ ) {
+    for ( int i=( negNum ? 0:1 ); i<str.length; i++ ) {
       bool t = str[i] == '1';
-      resultInt += pow(2, str.length -i -1).toInt() * ( ( t ^ negNum )? 1:0);
+      resultInt += pow(2, str.length -i -1).toInt() * ( (t ^ negNum) ? 1:0) ;
     }
-
     if ( negNum ) {
       resultInt = -1 * resultInt -1;
     }
@@ -43,17 +41,17 @@ class BaseConverter {
   }
 
   /// Constructor with dynamic parameter. Negative int supported.
-  ///   val is integer or binary string.
+  ///   val is integer or binary string without 'b' prefix.
   ///   _lenBinary is optional binary string, 16 by default.
-  /// Up to 53 bits because of web limitations
+  /// Up to 53 bits because of web limitations.
   BaseConverter(dynamic val, [this._lenBinary = 16]) {
-
     if (_lenBinary < 1) throw ArgumentError.value(_lenBinary, '_lenBinary', 'String is too short');
     if (_lenBinary > 53) throw ArgumentError.value(_lenBinary, '_lenBinary', 'String longer than 53 bits is not supported on web platforms');
     switch (val.runtimeType) {
       case int:
         valInt = val;
-        if ( valInt.abs() >= pow(2, _lenBinary - ((valInt < 0)?1:0)) ) throw  RangeError.value(val, 'val', 'String must be longer than $_lenBinary to fit this value');
+        int lenNeeded = valInt.bitLength + ( valInt.isNegative ? 1:0 );
+        if ( lenNeeded > _lenBinary ) throw  RangeError.value(val, 'val', 'String must be at least length $lenNeeded to fit this value');
         valStr = _intToBinaryStr(valInt);
         break;
 

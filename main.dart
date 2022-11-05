@@ -86,3 +86,25 @@
 //   print('==${nn.theDigits}');
 // }
 
+// import 'package:my01_flutter/t06_point_class.dart';
+// void main() {
+//   Point p1;
+//   Point p2;
+//   Point p3;
+//   double res;
+//
+//   p1 = Point(1, 2, 3);
+//   p2 = Point(9, -7, 1);
+//   p3 = Point(1, 2, -0.7);
+//   // p1 = Point.coordStart();
+//   // p1 = Point.coordOrt();
+//   // print('x=${p1.x} y=${p1.y} z=${p1.z}');
+//
+//   // res = Point.triangleSquare(p1, p2, p3);
+//   // res = p1.triangleSquare2p(p2, p3);
+//   // res = p3.triangleSquare2p(p2, p1);
+//   // res = p1.distanceTo(p2);
+//   // res = p2.distanceTo(p3);
+//   print('$res');
+// }
+

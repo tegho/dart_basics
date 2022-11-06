@@ -108,3 +108,37 @@
 //   print('$res');
 // }
 
+// import 'package:my01_flutter/t07_nth_root.dart';
+// void main() {
+//   num nn;
+//   num res;
+//
+//   nn = -9537881;
+//   res = nn.nthRoot(11);
+//   print('==    $res'); // ??
+//
+//   nn = 4052739537881;
+//   res = nn.nthRoot(13);
+//   print('==    $res'); // ??
+//
+//   nn = 9223372036841775807;
+//   res = nn.nthRoot(63);
+//   print('==    $res'); // 2
+//
+//   nn = 2384185791015625;
+//   res = nn.nthRoot(22, guess: 4);
+//   print('==    $res'); // 5
+//
+//   nn = 267785184193;
+//   res = nn.nthRoot(5);
+//   print('==    $res'); // 193
+//
+//   nn = 4.7;
+//   res = nn.nthRoot(19);
+//   print('==    $res'); //
+//
+//   nn = -0.8;
+//   res = nn.nthRoot(3);
+//   print('==    $res'); //
+// }
+

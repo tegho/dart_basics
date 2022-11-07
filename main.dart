@@ -1,5 +1,5 @@
 //
-// import 'package:my01_flutter/t01_nod_nok.dart';
+// import 't01_nod_nok.dart';
 // void main() {
 //   NodNok nn;
 //   nn = NodNok( [0,0] );
@@ -22,7 +22,7 @@
 //   print('NOD: ${nn.nod}  NOK: ${nn.nok}');
 // }
 
-// import 'package:my01_flutter/t02_base_converter.dart';
+// import 't02_base_converter.dart';
 // void main() {
 //   BaseConverter nn;
 //   nn = BaseConverter(-2,2);
@@ -53,7 +53,7 @@
 //   print('>> ${nn.valInt}');
 // }
 
-// import 'package:my01_flutter/t03_num_in_str.dart';
+// import 't03_num_in_str.dart';
 // void main() {
 //   PickNumsFromStr nn;
 //   // nn = PickNumsFromStr( 'dogo 1 193569 de 0 b3 0xa -5 -99.2 723.1 -0.0  ' );
@@ -63,7 +63,7 @@
 //
 // }
 
-// import 'package:my01_flutter/t04_words_counter.dart';
+// import 't04_words_counter.dart';
 // void main() {
 //   WordsCounter nn;
 //
@@ -76,7 +76,7 @@
 //   }
 // }
 //
-// import 'package:my01_flutter/t05_word_digits_picker.dart';
+// import 't05_word_digits_picker.dart';
 // void main() {
 //   PickWDigitsFromStr nn;
 //   nn = PickWDigitsFromStr( 'dogo, nine1, eight, 4, oNe, 0xCC,  two ,cat, eight ' );
@@ -86,7 +86,7 @@
 //   print('==${nn.theDigits}');
 // }
 
-// import 'package:my01_flutter/t06_point_class.dart';
+// import 't06_point_class.dart';
 // void main() {
 //   Point p1;
 //   Point p2;
@@ -108,7 +108,7 @@
 //   print('$res');
 // }
 
-// import 'package:my01_flutter/t07_nth_root.dart';
+// import 't07_nth_root.dart';
 // void main() {
 //   num nn;
 //   num res;
@@ -142,3 +142,29 @@
 //   print('==    $res'); //
 // }
 
+// import 't08_class_mixin.dart';
+// void main() {
+//   // AdminUser nn;
+//   // nn = AdminUser('no@gmail.com');
+//   // print('${nn.getMailSystem()}');
+//
+//   var user1 = GeneralUser('user1@gmail.com');
+//   var user2 = GeneralUser('user2@aol.com');
+//   var user3 = GeneralUser('user3@hotmail.com');
+//   var user4 = AdminUser('admin@he.net');
+//   var user5 = GeneralUser('user5@yahoo.com');
+//   var user6 = GeneralUser('user6@outlook.com');
+//
+//   var um = UserManager();
+//   um.del(user2);
+//   um.listEmails();
+//   um.add(user1);
+//   um.add(user2);
+//   um.add(user3);
+//   um.add(user4);
+//   um.add(user5);
+//   um.add(user6);
+//   um.del(user2);
+//
+//   um.listEmails();
+// }

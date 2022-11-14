@@ -115,7 +115,7 @@ class Integral {
 
       x.removeLast();
       double deltaFBreak = 1 / ( intervalEnd - x.last  );
-      x.add( intervalEnd );
+      x.add( intervalEnd  );
 
       f.add( funcOriginal( x.last ));
       if ( f.length >= 2 ) df.add( _dFuncSimple(f) );

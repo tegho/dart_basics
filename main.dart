@@ -168,3 +168,43 @@
 //
 //   um.listEmails();
 // }
+
+
+//
+// import 't09_integral.dart';
+// import 'dart:math';
+//
+// double func1(double x) {
+//   return 1/x;
+// }
+//
+// double func2(double x) {
+//   return cos(x)/x;
+// }
+//
+// double func3(double x) {
+//   return sin(x)/(x-1/3);
+// }
+//
+// double func4(double x) {
+//   return 2 * ( 2 - x );
+//   // integral(0..2) = 4
+// }
+//
+// void main() {
+//
+//   double step = 1e-3;
+//   // double step = 0.7e-3;
+//   // double step = 0.7e-5;
+//   double shift = step/3;
+//
+//   // var nn = Integral(func1, -2.9-shift, 2.7, step);
+//   // var nn = Integral(func2, 0, 3, step);
+//   // var nn = Integral(func2, -3, 0, step);
+//   // var nn = Integral(func2, -2-shift, 5, step);
+//   // var nn = Integral(func3, -3-shift, 7, step);
+//   var nn = Integral(func4, 0, 2, step);
+//   // var nn = Integral(func2, 0.4, 5, step);
+//
+//   print('${nn.result}');
+// }

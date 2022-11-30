@@ -1,3 +1,6 @@
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
+
 //
 // import 't01_nod_nok.dart';
 // void main() {
@@ -21,6 +24,9 @@
 //   nn = NodNok.pair( 4096, 128 );
 //   print('NOD: ${nn.nod}  NOK: ${nn.nok}');
 // }
+
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
 
 // import 't02_base_converter.dart';
 // void main() {
@@ -53,6 +59,9 @@
 //   print('>> ${nn.valInt}');
 // }
 
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
+
 // import 't03_num_in_str.dart';
 // void main() {
 //   PickNumsFromStr nn;
@@ -62,6 +71,9 @@
 //   print('==${nn.numList}');
 //
 // }
+
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
 
 // import 't04_words_counter.dart';
 // void main() {
@@ -75,6 +87,10 @@
 //     print('map:${key}:${nn.wordMap[key]}');
 //   }
 // }
+
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
+
 //
 // import 't05_word_digits_picker.dart';
 // void main() {
@@ -85,6 +101,9 @@
 //   print('in:>${nn.param}<');
 //   print('==${nn.theDigits}');
 // }
+
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
 
 // import 't06_point_class.dart';
 // void main() {
@@ -107,6 +126,9 @@
 //   // res = p2.distanceTo(p3);
 //   print('$res');
 // }
+
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
 
 // import 't07_nth_root.dart';
 // void main() {
@@ -142,6 +164,9 @@
 //   print('==    $res'); //
 // }
 
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
+
 // import 't08_class_mixin.dart';
 // void main() {
 //   // AdminUser nn;
@@ -169,7 +194,8 @@
 //   um.listEmails();
 // }
 
-
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
 //
 // import 't09_integral.dart';
 // import 'dart:math';
@@ -208,3 +234,104 @@
 //
 //   print('${nn.result}');
 // }
+
+/////#//////////////////////////////////////////////////////////////////#
+/////#//////////////////////////////////////////////////////////////////#
+
+import 't10_matrix_gauss.dart';
+void main() {
+
+  Matrix nn;
+  SolveGauss gs;
+
+  // nn = Matrix(4,3);
+  // nn.setRow(0, [   4,   2,  -1,   5 ] );
+  // nn.setRow(1, [   5,   3,  -2,  -1 ] );
+  // nn.setRow(2, [   3,   2,  -1,   2 ] );
+  // gs = SolveGauss(nn, 0);
+  // print('This is how it looks with precision = 0');
+  // if (gs.solutions.isNotEmpty) gs.solutions.forEach((a) { int i = gs.solutions.indexOf(a)+1; print('x$i=$a'); });
+  // else print('No solution here.');
+  // // Correct: [3,2,11]
+
+  //
+  // nn = Matrix(4,3);
+  // nn.setRow(0, [   1,  -2,  -3,   2 ] );
+  // nn.setRow(1, [   1,  -4, -13,  14 ] );
+  // nn.setRow(2, [  -3,   5,   4,   2 ] );
+  // gs = SolveGauss(nn);
+  // if (gs.solutions.isNotEmpty) gs.solutions.forEach((a) { int i = gs.solutions.indexOf(a)+1; print('x$i=$a'); });
+  // else print('No solution here.');
+  // // No solution
+  //
+  // nn = Matrix(4,3);
+  // nn.setRow(0, [   2,   3,   5,   10 ] );
+  // nn.setRow(1, [   3,   7,   4,   3 ] );
+  // nn.setRow(2, [   1,   2,   2,   3 ] );
+  // gs = SolveGauss(nn);
+  // if (gs.solutions.isNotEmpty) gs.solutions.forEach((a) { int i = gs.solutions.indexOf(a)+1; print('x$i=$a'); });
+  // else print('No solution here.');
+  // // Correct: [3,-2,2]
+  //
+  // nn = Matrix(4,3);
+  // nn.setRow(0, [  3,  -2,  1,  0 ] );
+  // nn.setRow(1, [  5, -14, 15,  0 ] );
+  // nn.setRow(2, [  1,   2, -3,  0 ] );
+  // gs = SolveGauss(nn);
+  // if (gs.solutions.isNotEmpty) gs.solutions.forEach((a) { int i = gs.solutions.indexOf(a)+1; print('x$i=$a'); });
+  // else print('No solution here.');
+  // // x1 = 0.5*x3
+  // // x2 = 1.25*x3
+  // // x3 = x3
+  //
+  // nn = Matrix(4,5);
+  // nn.setRow(0, [   0,   2,  -1,  -4 ] );
+  // nn.setRow(1, [   1,  -1,   5,   3 ] );
+  // nn.setRow(2, [   2,   1,  -1,   0 ] );
+  // nn.setRow(3, [   3,   2,   3,  -1 ] );
+  // nn.setRow(4, [   3,   4,   2,  -5 ] );
+  // gs = SolveGauss(nn);
+  // if (gs.solutions.isNotEmpty) gs.solutions.forEach((a) { int i = gs.solutions.indexOf(a)+1; print('x$i=$a'); });
+  // else print('No solution here.');
+  // // Correct: [1,-2,0]
+  //
+  // nn = Matrix(5,4);
+  // nn.setRow(0, [   2,  -1,  -3,  -1,   2 ] );
+  // nn.setRow(1, [   3,  -7,   1,   4,   3 ] );
+  // nn.setRow(2, [   4,  -5,  -3,   1,   4 ] );
+  // nn.setRow(3, [  -1,   4,  -2,  -3,  -1 ] );
+  // gs = SolveGauss(nn);
+  // if (gs.solutions.isNotEmpty) gs.solutions.forEach((a) { int i = gs.solutions.indexOf(a)+1; print('x$i=$a'); });
+  // else print('No solution here.');
+  // // x1 = 1 + 2*x3 + x4
+  // // x2 = x3 + x4
+  // // x3 = any
+  // // x4 = any
+
+  nn = Matrix(6,3);
+  nn.setRow(0, [   1,   2,  -1,   1,   1,   1 ] );
+  nn.setRow(1, [   2,   4,  -4,   3,   1,   0 ] );
+  nn.setRow(2, [   1,   2,   1,   2,   3,   2 ] );
+  gs = SolveGauss(nn);
+  if (gs.solutions.isNotEmpty) gs.solutions.forEach((a) { int i = gs.solutions.indexOf(a)+1; print('x$i=$a'); });
+  else print('No solution here.');
+  // // x1 = 2.25 - 2*x2 - 1.25*x5
+  // // x2 = any
+  // // x3 = 0.75 - 0.75*x5
+  // // x4 = -0.5 - 0.5*x5
+  // // x5 = any
+  // // =======================================
+  // // The last output is:
+  // // x1=((((1.0)-((2.0)*(x2)))-((-1.0)*(((1.0)-((-0.5)*((-0.5)-((0.5)*(x5)))))-((0.5)*(x5)))))-(((-0.5)-((0.5)*(x5)))))-((x5))
+  // // x2=x2
+  // // x3=((1.0)-((-0.5)*((-0.5)-((0.5)*(x5)))))-((0.5)*(x5))
+  // // x4=(-0.5)-((0.5)*(x5))
+  // // x5=x5
+  // //
+  // // To find x4 for x2=1 and x5=2
+  // // feed variable string to bc:
+  // // bash$> echo 'x2=1;x5=2; (-0.5)-((0.5)*(x5))'|bc
+  // // -1.5
+  // // =======================================
+}
+

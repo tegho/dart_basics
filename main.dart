@@ -307,7 +307,7 @@ void main() {
   // // x2 = x3 + x4
   // // x3 = any
   // // x4 = any
-
+  //
   nn = Matrix(6,3);
   nn.setRow(0, [   1,   2,  -1,   1,   1,   1 ] );
   nn.setRow(1, [   2,   4,  -4,   3,   1,   0 ] );
